@@ -1,0 +1,225 @@
+/* ============================================
+   Feature 1: Cookie Varieties
+   - Multiple cookie types with different costs/prices
+   - Player selects which varieties to offer each day
+   - Each variety has unique demand characteristics
+   ============================================ */
+
+/* No special CSS needed - uses standard Tailwind */
+
+/* ============================================
+   Feature 2: Shop Upgrades
+   - Upgrade system with 4 upgrade categories
+   - Each has multiple levels with increasing costs
+   - Upgrades provide permanent gameplay bonuses
+   ============================================ */
+
+/* No special CSS needed - uses standard Tailwind */
+
+/* ============================================
+   Feature 3: Enhanced Visuals
+   - Improved animations and visual effects
+   - Floating background elements
+   - Enhanced shop scene with more detail
+   - Particle effects during customer animation
+   - Gradient backgrounds and shadows
+   ============================================ */
+
+/* Floating animation for background cookies */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Slow float for clouds */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Float up animation for celebration particles */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 3s ease-out infinite;
+}
+
+/* Slow bounce for main cookie emoji */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+/* Slow pulse for shop sign */
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+}
+
+/* Enhanced customer walking - from left */
+@keyframes walkFromLeftEnhanced {
+  0% {
+    transform: translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+    transform: translateX(10px) scale(1);
+  }
+  45% {
+    transform: translateX(38vw) scale(1);
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(38vw) scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(38vw) scale(0.7);
+    opacity: 0.7;
+  }
+  85% {
+    transform: translateX(38vw) scale(0.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(38vw) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Enhanced customer walking - from right */
+@keyframes walkFromRightEnhanced {
+  0% {
+    transform: translateX(0) scaleX(-1) scale(0.8);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+    transform: translateX(-10px) scaleX(-1) scale(1);
+  }
+  45% {
+    transform: translateX(-38vw) scaleX(-1) scale(1);
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(-38vw) scaleX(-1) scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(-38vw) scaleX(-1) scale(0.7);
+    opacity: 0.7;
+  }
+  85% {
+    transform: translateX(-38vw) scaleX(-1) scale(0.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(-38vw) scaleX(-1) scale(0);
+    opacity: 0;
+  }
+}
+
+.customer-walk-left-enhanced {
+  animation: walkFromLeftEnhanced 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.customer-walk-right-enhanced {
+  animation: walkFromRightEnhanced 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+/* Enhanced bounce for floating cookie */
+@keyframes bounceEnhanced {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-20px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-10px) rotate(5deg);
+  }
+}
+
+.animate-bounce-enhanced {
+  animation: bounceEnhanced 1s ease-in-out infinite;
+}
+
+/* Fast ping for cash register effect */
+@keyframes pingFast {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping-fast {
+  animation: pingFast 0.8s ease-out forwards;
+}
+
+/* Number input styling */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
